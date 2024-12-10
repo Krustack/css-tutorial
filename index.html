@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            & > div {
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+      textarea {
+        width: 300px;
+        height: 200px;
+      }
+      #box-el {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Basic css</h2>
+    <div class="container">
+      <div>
+        <label for="box">box</label>
+        <textarea
+          name="css-input-box"
+          id="css-input-box"
+          placeholder="Enter css code for box here ...."
+        ></textarea>
+      </div>
+      <div>
+        <label for="p">text in box</label>
+        <textarea
+          name="css-input-p"
+          id="css-input-p"
+          placeholder="Enter css code for text here ...."
+        ></textarea>
+      </div>
+    </div>
+    <p>
+      default css code for box <br />
+      width: 100px;<br />
+      height: 100px;<br />
+      background-color: red;
+    </p>
+    <div id="box-el">
+      <p>Box</p>
+    </div>
+    <hr />
+    <p>web application ตัวนี้สร้างมาเพื่อฝึกการใช้งาน css เบื้องต้นสำหรับมือใหม่ version นี้ทำมาเพื่อทดสอบและ จะพัฒนาเพิ่มเติมในอนาคตให้ครอบคุมเนื้อหา css</p>
+    <p>dev by : Wisanu Phonchariyatham</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
