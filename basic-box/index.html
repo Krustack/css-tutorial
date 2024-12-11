@@ -26,19 +26,35 @@
                 gap: 8px
             }
         }
-        input select {
+        input,select {
             height: 16px;
+            width: 100px;
+            display: inline-block;
+            overflow: hidden;
+        }
+        span {
+            display: inline-block;
+            width: 20px;
         }
       #box-el {
         width: 100px;
         height: 100px;
         background-color: red;
+        margin :16px 0
       }
-      #border div {
-        width: 40%;
+      #border > div {
         display: grid;
         grid-template-columns: 4fr 2fr 4fr;
         gap: 4px;
+      }
+      #border-radius > div {
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr 4fr ;
+        gap: 4px;
+        & div:nth-child(6) ,div:nth-child(7),div:nth-child(8) {
+          display: none;
+
+        }
       }
     </style>
   </head>
@@ -92,7 +108,7 @@
             <p>(style)</p>
             <p>(color)</p>
             <div>
-              <input type="text" id="line-size">px
+              <input type="text" id="line-size"><span>px</span>
             </div>
             <div>
               <select name="linestyle" id="line-style">
@@ -112,8 +128,35 @@
           </div>
         </div>
       </div>
+      <div id="border-radius">
+        <h3>border-radius:</h3>
+        <div>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <div>
+            <input type="text" id="top-left"><span>px</span>
+          </div>
+          <div>
+            <input type="text" id="top-right"><span>px</span>
+          </div>
+          <div>
+            <input type="text" id="bottom-right"><span>px</span>
+          </div>
+          <div>
+            <input type="text" id="bottom-left"><span>px</span>
+          </div>
+        </div>
+        <select name="" id="radius-mode">
+          <option value="all">all-corner</option>
+          <option value="y-x">y-x</option>
+          <option value="stand-alone">stand alone</option>
+        </select>
+      </div>
+    </div>
+
     <div id="box-el">
-      <p></p>
     </div>
     <hr />
     <p>web application ตัวนี้สร้างมาเพื่อฝึกการใช้งาน css เบื้องต้นสำหรับมือใหม่ version นี้ทำมาเพื่อทดสอบและ จะพัฒนาเพิ่มเติมในอนาคตให้ครอบคุมเนื้อหา css</p>
