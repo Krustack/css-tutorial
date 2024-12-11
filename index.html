@@ -4,30 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        .container {
-            display: flex;
-            justify-content: space-evenly;
-            & > div {
-                margin: 10px;
-                display: flex;
-                flex-direction: column;
-            }
-        }
-      textarea {
-        width: 300px;
-        height: 200px;
-      }
-      #box-el {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../basic-box/index.html">Basic Box</a></li>
+        <li><a href="../font/index.html">Font</a></li>
+        <li><a href="../space/index.html">space</a></li>
+        <li><a href="../display/index.html">display</a></li>
+        <li><a href="../position/index.html">Position</a></li>
+        <li><a href="../flexbox/index.html">Flexbox</a></li>
+        <li><a href="../grid/index.html">Grid</a></li>
+      </ul>
+    </nav>
     <h2>Basic css</h2>
-    <a href="./basic-box">box model</a>
     <div class="container">
       <div>
         <label for="box">box</label>
@@ -35,7 +27,12 @@
           name="css-input-box"
           id="css-input-box"
           placeholder="Enter css code for box here ...."
-        ></textarea>
+        >
+width:100px;
+height:100px;
+background-color:red;
+      </textarea
+        >
       </div>
       <div>
         <label for="p">text in box</label>
@@ -46,17 +43,14 @@
         ></textarea>
       </div>
     </div>
-    <p>
-      default css code for box <br />
-      width: 100px;<br />
-      height: 100px;<br />
-      background-color: red;
-    </p>
     <div id="box-el">
       <p>Box</p>
     </div>
     <hr />
-    <p>web application ตัวนี้สร้างมาเพื่อฝึกการใช้งาน css เบื้องต้นสำหรับมือใหม่ version นี้ทำมาเพื่อทดสอบและ จะพัฒนาเพิ่มเติมในอนาคตให้ครอบคุมเนื้อหา css</p>
+    <p>
+      web application ตัวนี้สร้างมาเพื่อฝึกการใช้งาน css เบื้องต้นสำหรับมือใหม่
+      version นี้ทำมาเพื่อทดสอบและ จะพัฒนาเพิ่มเติมในอนาคตให้ครอบคุมเนื้อหา css
+    </p>
     <p>dev by : Wisanu Phonchariyatham</p>
 
     <script src="script.js"></script>

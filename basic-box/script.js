@@ -72,8 +72,8 @@ function updateRadiusMode() {
     input4.style.display = 'none';
   }
   if(radiusMode.value === 'y-x') {
-    p1.textContent = 'x';
-    p2.textContent = 'y';
+    p1.textContent = 'y';
+    p2.textContent = 'x';
     p3.textContent = '';
     p4.textContent = '';
     input1.style.display = 'inline-block';

@@ -4,127 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      body{
-          font-size: 16px;
-      }
-      *{
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-      }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap:8px;
-
-            & > div {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 8px
-            }
-        }
-        input,select {
-            height: 16px;
-            width: 100px;
-            display: inline-block;
-            overflow: hidden;
-        }
-        span {
-            display: inline-block;
-            width: 20px;
-        }
-      #box-el {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        margin :16px 0
-      }
-      #border > div {
-        display: grid;
-        grid-template-columns: 4fr 2fr 4fr;
-        gap: 4px;
-      }
-      #border-radius > div {
-        display: grid;
-        grid-template-columns: 4fr 4fr 4fr 4fr ;
-        gap: 4px;
-        & div:nth-child(6) ,div:nth-child(7),div:nth-child(8) {
-          display: none;
-
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
+    <nav>
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../basic-box/index.html">Basic Box</a></li>
+        <li><a href="../font/index.html">Font</a></li>
+        <li><a href="../space/index.html">space</a></li>
+        <li><a href="../display/index.html">display</a></li>
+        <li><a href="../position/index.html">Position</a></li>
+        <li><a href="../flexbox/index.html">Flexbox</a></li>
+        <li><a href="../grid/index.html">Grid</a></li>
+      </ul>
+    </nav>
     <h2>Basic box</h2>
     <div class="container">
-        <div id="html-font">
-            <h3>html</h3>
-            <h3>font-size</h3>
-            <input type="text" value="16" disabled>
-            <p>px (for change default value rem units)</p>
-        </div>
-        <div id="box-font">
-          <h3>box</h3>
-          <h3>font-size</h3>
-          <input type="text" value="16" disabled>
-          <p>px (for change default value em units)</p>
+      <div id="html-font">
+        <h3>html</h3>
+        <h3>font-size</h3>
+        <input type="text" value="16" disabled />
+        <p>px (for change default value rem units)</p>
       </div>
-        <div id="width">
-            <h3>width :</h3>
-            <input type="text" value="100">
-            <select name="" id="">
-                <option value="px">px</option>
-                <option value="%">%</option>
-                <option value="vw">vw</option>
-                <option value="rem">rem</option>
-                <option value="em">em</option>
-            </select>
-        </div>
-        <div id="height">
-          <h3>height :</h3>
-          <input type="text" value="100">
-          <select name="" id="">
-              <option value="px">px</option>
-              <option value="%">%</option>
-              <option value="vh">vh</option>
-              <option value="rem">rem</option>
-              <option value="em">em</option>
-          </select>
-        </div>
-        <div id="bg">
-          <h3>background-color :</h3>
-          <input type="text" value="red">
-        </div>
+      <div id="box-font">
+        <h3>box</h3>
+        <h3>font-size</h3>
+        <input type="text" value="16" disabled />
+        <p>px (for change default value em units)</p>
+      </div>
+      <div id="width">
+        <h3>width :</h3>
+        <input type="text" value="100" />
+        <select name="" id="">
+          <option value="px">px</option>
+          <option value="%">%</option>
+          <option value="vw">vw</option>
+          <option value="rem">rem</option>
+          <option value="em">em</option>
+        </select>
+      </div>
+      <div id="height">
+        <h3>height :</h3>
+        <input type="text" value="100" />
+        <select name="" id="">
+          <option value="px">px</option>
+          <option value="%">%</option>
+          <option value="vh">vh</option>
+          <option value="rem">rem</option>
+          <option value="em">em</option>
+        </select>
+      </div>
+      <div id="bg">
+        <h3>background-color :</h3>
+        <input type="text" value="red" />
+      </div>
 
-        <div id="border">
-          <h3>border:</h3>
+      <div id="border">
+        <h3>border:</h3>
+        <div>
+          <p>(size)</p>
+          <p>(style)</p>
+          <p>(color)</p>
+          <div><input type="text" id="line-size" />px</div>
           <div>
-            <p>(size)</p>
-            <p>(style)</p>
-            <p>(color)</p>
-            <div>
-              <input type="text" id="line-size"><span>px</span>
-            </div>
-            <div>
-              <select name="linestyle" id="line-style">
-                <option value="none">none</option>
-                <option value="solid">solid</option>
-                <option value="dotted">dotted</option>
-                <option value="dashed">dashed</option>
-                <option value="double">double</option>
-                <option value="groove">groove</option>
-                <option value="ridge">ridge</option>
-                <option value="inset">inset</option>
-                <option value="outset">outset</option>
-              </select>
+            <select name="linestyle" id="line-style">
+              <option value="none">none</option>
+              <option value="solid">solid</option>
+              <option value="dotted">dotted</option>
+              <option value="dashed">dashed</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+              <option value="ridge">ridge</option>
+              <option value="inset">inset</option>
+              <option value="outset">outset</option>
+            </select>
           </div>
           <div>
-            <input type="text" id="line-color">
+            <input type="text" id="line-color" />
           </div>
         </div>
       </div>
@@ -135,18 +92,10 @@
           <p></p>
           <p></p>
           <p></p>
-          <div>
-            <input type="text" id="top-left"><span>px</span>
-          </div>
-          <div>
-            <input type="text" id="top-right"><span>px</span>
-          </div>
-          <div>
-            <input type="text" id="bottom-right"><span>px</span>
-          </div>
-          <div>
-            <input type="text" id="bottom-left"><span>px</span>
-          </div>
+          <div><input type="text" id="top-left" /><span>px</span></div>
+          <div><input type="text" id="top-right" /><span>px</span></div>
+          <div><input type="text" id="bottom-right" /><span>px</span></div>
+          <div><input type="text" id="bottom-left" /><span>px</span></div>
         </div>
         <select name="" id="radius-mode">
           <option value="all">all-corner</option>
@@ -156,10 +105,12 @@
       </div>
     </div>
 
-    <div id="box-el">
-    </div>
+    <div id="box-el"></div>
     <hr />
-    <p>web application ตัวนี้สร้างมาเพื่อฝึกการใช้งาน css เบื้องต้นสำหรับมือใหม่ version นี้ทำมาเพื่อทดสอบและ จะพัฒนาเพิ่มเติมในอนาคตให้ครอบคุมเนื้อหา css</p>
+    <p>
+      web application ตัวนี้สร้างมาเพื่อฝึกการใช้งาน css เบื้องต้นสำหรับมือใหม่
+      version นี้ทำมาเพื่อทดสอบและ จะพัฒนาเพิ่มเติมในอนาคตให้ครอบคุมเนื้อหา css
+    </p>
     <p>dev by : Wisanu Phonchariyatham</p>
 
     <script src="script.js"></script>
