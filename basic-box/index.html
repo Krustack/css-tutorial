@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+          font-size: 16px;
+      }
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap:0.5em;
+
+            & > div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap:0.5em
+            }
+        }
+        input select {
+            height: 1em;
+        }
+      #box-el {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h2>Basic box</h2>
+    <div class="container">
+        <div id="html-font">
+            <h3>html</h3>
+            <h3>font-size</h3>
+            <input type="text" value="16" disabled>
+            <p>px</p>
+        </div>
+        <div id="width">
+            <h3>width :</h3>
+            <input type="text">
+            <select name="" id="">
+                <option value="px">px</option>
+                <option value="%">%</option>
+                <option value="vw">vw</option>
+                <option value="rem">rem</option>
+                <option value="em">em</option>
+            </select>
+        </div>
+        <div id="height">
+          <h3>height :</h3>
+          <input type="text">
+          <select name="" id="">
+              <option value="px">px</option>
+              <option value="%">%</option>
+              <option value="vh">vh</option>
+              <option value="rem">rem</option>
+              <option value="em">em</option>
+          </select>
+        </div>
+        <div id="bg">
+          <h3>background-color :</h3>
+          <input type="text">
+        </div>
+        <div>
+
+        </div>
+
+
+    <p>
+      default css code for box <br />
+      width: 100px;<br />
+      height: 100px;<br />
+      background-color: red;
+    </p>
+    <div id="box-el">
+      <p></p>
+    </div>
+    <hr />
+    <p>web application ตัวนี้สร้างมาเพื่อฝึกการใช้งาน css เบื้องต้นสำหรับมือใหม่ version นี้ทำมาเพื่อทดสอบและ จะพัฒนาเพิ่มเติมในอนาคตให้ครอบคุมเนื้อหา css</p>
+    <p>dev by : Wisanu Phonchariyatham</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
