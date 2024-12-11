@@ -17,22 +17,28 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            gap:0.5em;
+            gap:8px;
 
             & > div {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                gap:0.5em
+                gap: 8px
             }
         }
         input select {
-            height: 1em;
+            height: 16px;
         }
       #box-el {
         width: 100px;
         height: 100px;
         background-color: red;
+      }
+      #border div {
+        width: 40%;
+        display: grid;
+        grid-template-columns: 4fr 2fr 4fr;
+        gap: 4px;
       }
     </style>
   </head>
@@ -44,8 +50,14 @@
             <h3>html</h3>
             <h3>font-size</h3>
             <input type="text" value="16" disabled>
-            <p>px</p>
+            <p>px (for change default value rem units)</p>
         </div>
+        <div id="box-font">
+          <h3>box</h3>
+          <h3>font-size</h3>
+          <input type="text" value="16" disabled>
+          <p>px (for change default value em units)</p>
+      </div>
         <div id="width">
             <h3>width :</h3>
             <input type="text">
@@ -72,9 +84,33 @@
           <h3>background-color :</h3>
           <input type="text">
         </div>
-        <div>
 
+        <div id="border">
+          <h3>border:</h3>
+          <div>
+            <p>size</p>
+            <p>style</p>
+            <p>color</p>
+            <div>
+              <input type="text" id="line-size">px
+            </div>
+            <div>
+              <select name="linestyle" id="line-style">
+                <option value="solid">solid</option>
+                <option value="dotted">dotted</option>
+                <option value="dashed">dashed</option>
+                <option value="double">double</option>
+                <option value="groove">groove</option>
+                <option value="ridge">ridge</option>
+                <option value="inset">inset</option>
+                <option value="outset">outset</option>
+              </select>
+          </div>
+          <div>
+            <input type="text" id="line-color">
+          </div>
         </div>
+      </div>
 
 
     <p>
